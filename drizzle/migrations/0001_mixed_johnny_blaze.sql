@@ -1,0 +1,1 @@
+ALTER TABLE "students" ADD COLUMN "subject" varchar(50) NOT NULL;

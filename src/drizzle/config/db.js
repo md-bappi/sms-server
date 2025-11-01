@@ -5,8 +5,8 @@ import {
   POSTGRES_USER,
   POSTGRES_PORT,
   POSTGRES_HOST,
-} from "../secret";
-const { Pool } = require("pg");
+} from "../../secret.js";
+import { Pool } from "pg";
 
 const pool = new Pool({
   host: POSTGRES_HOST,
@@ -18,4 +18,4 @@ const pool = new Pool({
 
 const db = drizzle(pool);
 
-module.exports = db;
+export default db;

@@ -1,11 +1,11 @@
 {
-  "id": "8a099645-f82a-4aad-a754-6497bc294a6b",
-  "prevId": "5d972ab3-1a78-4852-8de0-95e3f4552695",
+  "id": "73fbd46b-95ba-46dd-bd48-fbb4e240011e",
+  "prevId": "8421cfe6-146f-4604-9f8a-3ee9c85c5444",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.classes": {
-      "name": "classes",
+    "public.class": {
+      "name": "class",
       "schema": "",
       "columns": {
         "id": {
@@ -20,21 +20,21 @@
           "primaryKey": false,
           "notNull": true
         },
-        "teacher_name": {
-          "name": "teacher_name",
+        "teacherName": {
+          "name": "teacherName",
           "type": "varchar(50)",
           "primaryKey": false,
           "notNull": true
         },
-        "created_at": {
-          "name": "created_at",
+        "createdAt": {
+          "name": "createdAt",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true,
           "default": "now()"
         },
-        "updated_at": {
-          "name": "updated_at",
+        "updatedAt": {
+          "name": "updatedAt",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true,
@@ -49,8 +49,8 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.students": {
-      "name": "students",
+    "public.student": {
+      "name": "student",
       "schema": "",
       "columns": {
         "id": {
@@ -83,21 +83,21 @@
           "primaryKey": false,
           "notNull": true
         },
-        "class_id": {
-          "name": "class_id",
+        "classId": {
+          "name": "classId",
           "type": "integer",
           "primaryKey": false,
           "notNull": true
         },
-        "created_at": {
-          "name": "created_at",
+        "createdAt": {
+          "name": "createdAt",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true,
           "default": "now()"
         },
-        "updated_at": {
-          "name": "updated_at",
+        "updatedAt": {
+          "name": "updatedAt",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true,
@@ -106,12 +106,12 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "students_class_id_classes_id_fk": {
-          "name": "students_class_id_classes_id_fk",
-          "tableFrom": "students",
-          "tableTo": "classes",
+        "student_classId_class_id_fk": {
+          "name": "student_classId_class_id_fk",
+          "tableFrom": "student",
+          "tableTo": "class",
           "columnsFrom": [
-            "class_id"
+            "classId"
           ],
           "columnsTo": [
             "id"
@@ -121,15 +121,7 @@
         }
       },
       "compositePrimaryKeys": {},
-      "uniqueConstraints": {
-        "students_email_unique": {
-          "name": "students_email_unique",
-          "nullsNotDistinct": false,
-          "columns": [
-            "email"
-          ]
-        }
-      },
+      "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
       "isRLSEnabled": false

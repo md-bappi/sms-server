@@ -1,6 +1,6 @@
 {
-  "id": "8a099645-f82a-4aad-a754-6497bc294a6b",
-  "prevId": "5d972ab3-1a78-4852-8de0-95e3f4552695",
+  "id": "a0148713-cc86-4269-9fa3-ddcaee2d5774",
+  "prevId": "73fbd46b-95ba-46dd-bd48-fbb4e240011e",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -14,8 +14,8 @@
           "primaryKey": true,
           "notNull": true
         },
-        "subject": {
-          "name": "subject",
+        "class_name": {
+          "name": "class_name",
           "type": "varchar(50)",
           "primaryKey": false,
           "notNull": true
@@ -49,8 +49,8 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.students": {
-      "name": "students",
+    "public.student": {
+      "name": "student",
       "schema": "",
       "columns": {
         "id": {
@@ -73,12 +73,6 @@
         },
         "email": {
           "name": "email",
-          "type": "varchar(50)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "subject": {
-          "name": "subject",
           "type": "varchar(50)",
           "primaryKey": false,
           "notNull": true
@@ -106,9 +100,9 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "students_class_id_classes_id_fk": {
-          "name": "students_class_id_classes_id_fk",
-          "tableFrom": "students",
+        "student_class_id_classes_id_fk": {
+          "name": "student_class_id_classes_id_fk",
+          "tableFrom": "student",
           "tableTo": "classes",
           "columnsFrom": [
             "class_id"
@@ -122,8 +116,8 @@
       },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
-        "students_email_unique": {
-          "name": "students_email_unique",
+        "student_email_unique": {
+          "name": "student_email_unique",
           "nullsNotDistinct": false,
           "columns": [
             "email"

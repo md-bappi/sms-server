@@ -1,6 +1,6 @@
 {
-  "id": "8a099645-f82a-4aad-a754-6497bc294a6b",
-  "prevId": "5d972ab3-1a78-4852-8de0-95e3f4552695",
+  "id": "2b8332ba-1915-4513-8558-5aa330fad367",
+  "prevId": "a0148713-cc86-4269-9fa3-ddcaee2d5774",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -73,12 +73,6 @@
         },
         "email": {
           "name": "email",
-          "type": "varchar(50)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "subject": {
-          "name": "subject",
           "type": "varchar(50)",
           "primaryKey": false,
           "notNull": true

@@ -1,11 +1,11 @@
 {
-  "id": "8a099645-f82a-4aad-a754-6497bc294a6b",
-  "prevId": "5d972ab3-1a78-4852-8de0-95e3f4552695",
+  "id": "935e5a58-9090-44dd-bdad-9e1281e6a0dd",
+  "prevId": "ac0fbac4-620c-4b40-a524-d267850cce6c",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.classes": {
-      "name": "classes",
+    "public.class": {
+      "name": "class",
       "schema": "",
       "columns": {
         "id": {
@@ -14,8 +14,8 @@
           "primaryKey": true,
           "notNull": true
         },
-        "subject": {
-          "name": "subject",
+        "class_name": {
+          "name": "class_name",
           "type": "varchar(50)",
           "primaryKey": false,
           "notNull": true
@@ -49,8 +49,8 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.students": {
-      "name": "students",
+    "public.student": {
+      "name": "student",
       "schema": "",
       "columns": {
         "id": {
@@ -77,8 +77,8 @@
           "primaryKey": false,
           "notNull": true
         },
-        "subject": {
-          "name": "subject",
+        "class_name": {
+          "name": "class_name",
           "type": "varchar(50)",
           "primaryKey": false,
           "notNull": true
@@ -106,10 +106,10 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "students_class_id_classes_id_fk": {
-          "name": "students_class_id_classes_id_fk",
-          "tableFrom": "students",
-          "tableTo": "classes",
+        "student_class_id_class_id_fk": {
+          "name": "student_class_id_class_id_fk",
+          "tableFrom": "student",
+          "tableTo": "class",
           "columnsFrom": [
             "class_id"
           ],
@@ -121,15 +121,7 @@
         }
       },
       "compositePrimaryKeys": {},
-      "uniqueConstraints": {
-        "students_email_unique": {
-          "name": "students_email_unique",
-          "nullsNotDistinct": false,
-          "columns": [
-            "email"
-          ]
-        }
-      },
+      "uniqueConstraints": {},
       "policies": {},
       "checkConstraints": {},
       "isRLSEnabled": false

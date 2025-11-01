@@ -10,7 +10,7 @@ import {
 
 export default defineConfig({
   out: "./drizzle/migrations",
-  schema: "./src/config/schema",
+  schema: "./src/drizzle/config/schema.js",
   dialect: "postgresql",
   dbCredentials: {
     host: POSTGRES_HOST,
